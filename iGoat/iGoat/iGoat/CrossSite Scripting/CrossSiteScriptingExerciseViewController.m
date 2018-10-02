@@ -42,8 +42,5 @@
  }
  */
 
-- (IBAction)loadButton:(id)sender {
-    [self.webview loadHTMLString:[NSString stringWithFormat:@"Welcome to XSS Exercise !!! \n Here is UIWebView ! %@",_txtField.text] baseURL:nil];
-    
 }
 @end
