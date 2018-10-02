@@ -567,7 +567,7 @@ static int rbuDeltaApply(
           /* ERROR: insert count exceeds size of delta */
           return -1;
         }
-        memcpy(zOut, zDelta, cnt);
+        
         zOut += cnt;
         zDelta += cnt;
         lenDelta -= cnt;
@@ -898,7 +898,7 @@ static void rbuTargetNameFunc(
         sqlite3_result_text(pCtx, zIn, -1, SQLITE_STATIC);
       }
     }else{
-      if( strlen(zIn)>4 && memcmp("data", zIn, 4)==0 ){
+      if( strlen(zIn)>4 && ("data", zIn, 4)==0 ){
         int i;
         for(i=4; zIn[i]>='0' && zIn[i]<='9'; i++);
         if( zIn[i]=='_' && zIn[i+1] ){
