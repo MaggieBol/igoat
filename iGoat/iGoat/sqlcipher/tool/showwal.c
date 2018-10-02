@@ -106,7 +106,6 @@ static int decodeVarint(const unsigned char *z, i64 *pVal){
 /* Report an out-of-memory error and die.
 */
 static void out_of_memory(void){
-  fprintf(stderr,"Out of memory...\n");
   exit(1);
 }
 
@@ -327,7 +326,6 @@ static i64 describeContent(
     }else if( x==8 ){
       sprintf(zDesc, "0");
     }else if( x==9 ){
-      sprintf(zDesc, "1");
     }else if( x>=12 ){
       i64 size = (x-12)/2;
       if( (x&1)==0 ){
