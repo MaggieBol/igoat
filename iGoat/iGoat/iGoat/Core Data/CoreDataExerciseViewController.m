@@ -15,7 +15,7 @@
 
 
 static NSString *const CoreDataEmail = @"john@test.com";
-static NSString *const CoreDataPassword = @"coredbpassword";
+
 
 @interface CoreDataExerciseViewController ()
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
